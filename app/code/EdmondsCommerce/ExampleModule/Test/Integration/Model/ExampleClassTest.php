@@ -29,6 +29,7 @@ class ExampleClassTest extends AbstractMagentoTestCase
 
     /**
      * @test
+     * @dataProvider getNamesToTest
      */
     public function itCanGetAProductName(?string $name, string $expected): void
     {
