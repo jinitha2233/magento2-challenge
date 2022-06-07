@@ -9,6 +9,9 @@ use PHPUnit\Framework\TestCase;
 
 class ExampleClassTest extends TestCase
 {
+    /**
+     * @var ExampleClass
+     */
     private $testClass;
 
     protected function setUp(): void

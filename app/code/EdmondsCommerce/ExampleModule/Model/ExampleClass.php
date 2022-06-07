@@ -10,6 +10,9 @@ use RuntimeException;
 class ExampleClass
 {
 
+    /**
+     * Simple function that takes a Product object and returns the name. This should have an integration test
+     */
     public function getProductName(ProductInterface $product): string
     {
         $name = $product->getName();
@@ -20,6 +23,9 @@ class ExampleClass
         return $name;
     }
 
+    /**
+     * Simple function that only deals with scalars. This can be unit tested
+     */
     public function add(float $left, float $right): float
     {
         return $left + $right;
