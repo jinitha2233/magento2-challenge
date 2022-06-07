@@ -11,7 +11,7 @@ Setting up the repo
 
 To use the template - click the green `Use this template` button at the top of the page.
 
-Fill in the details and a copy of the repository will be created.
+Give the repository a descriptive name, mark it as Private, and click the `Create repository from template` button
 
 In order to get the tests to run, we need to be able to clone code down from the Magento repositories. To do this we
 need a username and password to use with composer.
@@ -27,3 +27,14 @@ To handle this you need to do the following:
     - `MAGENTO_PASSWORD` should be the Private key from Magento
 
 Once this is done you should be able the see the tests run in the Actions tab of the repo.
+
+Completing the Challenge
+------------------------
+
+As you add the code for the challenge, it is recommended to commit and push frequently to pick up anything that needs to
+be updated as you go, rather than waiting until the end to fix any issues.
+
+Once you have completed all the tasks for the challenge, please make sure that the tests are passing, and then share the
+repository with @edmondscommerce and let us know.
+
+Good Luck!
