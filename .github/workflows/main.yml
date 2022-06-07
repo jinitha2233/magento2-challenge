@@ -56,7 +56,8 @@ jobs:
             ${{ runner.os }}-composer-v1-
 
       - name: Install Dependencies
-        uses: php-actions/composer@v6
+        run: composer install --prefer-dist
+        shell: bash
         if: steps.cacheVendor.outputs.cache-hit != 'true'
 
 
