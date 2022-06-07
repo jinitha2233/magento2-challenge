@@ -32,7 +32,7 @@ case ${action} in
     ;;
 "Unit Tests")
     php ${DIR}/vendor/bin/phpunit \
-    -c ${DIR}/dev/tests/unit/phpunit.xml \
+    -c ${DIR}/dev/tests/unit/phpunit.edmondscommerce.xml \
     --testsuite "Local Unit Tests"
     ;;
 *)
