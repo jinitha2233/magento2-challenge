@@ -55,10 +55,31 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-v1-
 
+      - name: Create auth.json file
+        if: steps.cacheVendor.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          cat << EOF > $GITHUB_WORKSPACE/auth.json
+          {
+              "http-basic": {
+                  "repo.magento.com": {
+                      "username": "${{ secrets.MAGENTO_USERNAME }}",
+                      "password": "${{ secrets.MAGENTO_PASSWORD }}"
+                  }
+              }
+          }
+          EOF
+
       - name: Install Dependencies
         run: composer install --prefer-dist
         shell: bash
         if: steps.cacheVendor.outputs.cache-hit != 'true'
+
+      - name: Remove auth.json file
+        run: rm -f $GITHUB_WORKSPACE/auth.json
+        shell: bash
+        if: steps.cacheVendor.outputs.cache-hit != 'true'
+
 
 
   # The integration test require a full environment to be present, so this is setup in a different job to the static tests that just require the
