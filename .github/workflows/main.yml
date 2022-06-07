@@ -161,12 +161,10 @@ jobs:
       fail-fast: false
       matrix:
         test-type:
-          - "Frontend PHP Code Sniffer"
-          - "Frontend Mess Detector"
-          - "Frontend LESS Code Sniffer"
           - "Backend Copy Paste Detector"
           - "Backend Mess Detector"
           - "Backend Code Sniffer"
+          - "Unit Tests"
 
     steps:
       - name: Checkout latest Ref
