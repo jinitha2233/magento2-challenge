@@ -1,0 +1,25 @@
+<?php
+$product = $block->getProduct();
+
+//fetch product custom attributes
+$xAxis = $product->getData('x_axis');
+$yAxis = $product->getData('y_axis');
+?>
+
+//Display Multiplication Table tab if both the attributes are not empty
+<?php if($xAxis && $yAxis) :
+    $multiplication = $xAxis * $yAxis;
+?>
+<div class="multiplication-table-container">
+    <table class="multiplication-table">
+        <tr>
+            <td>X</td>
+            <td><?= $block->escapeHtml($xAxis) ?></td>
+        </tr>
+        <tr>
+            <td><?= $block->escapeHtml($yAxis) ?></td>
+            <td><?= $block->escapeHtml($multiplication) ?></td>
+        </tr>
+    </table>
+</div>
+<?php endif;?>
