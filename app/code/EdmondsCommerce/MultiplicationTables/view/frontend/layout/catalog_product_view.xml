@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © EdmondsCommerce, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="EdmondsCommerce_MultiplicationTables::css/multiplicationtable.css"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="test.tab" template="EdmondsCommerce_MultiplicationTables::product/view/multiplicationtable.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Multiplication Table</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
